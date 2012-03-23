@@ -22,8 +22,8 @@ begin
 
           field :data, :type => BSON::Binary, :default => BSON::Binary.new(Marshal.dump({}))
 
-          def initialize
-            super()
+          def initialize(arg)
+            super(arg)
             user_id = current_user.id.to_s
           end
         end
